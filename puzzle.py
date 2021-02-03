@@ -1,4 +1,7 @@
 '''
+Github url:
+https://github.com/sasha-tsepilova/puzzle
+This module checks correctness of given board.
 '''
 def validate_rows(board: list):
     '''
@@ -41,7 +44,7 @@ def validate_columns(board: list):
     '''
     for i in range(9):
         numbers = set()
-    
+
         for j in range(9):
             element = board[j][i]
             if element not in('*', ' '):
@@ -73,7 +76,7 @@ def validate_corner(board: list):
                 if element in numbers:
                     return False
                 numbers.add(element)
-        
+
         for j in range(i, i + 5):
             element = board[8-i][j]
             if element not in('*', ' '):
