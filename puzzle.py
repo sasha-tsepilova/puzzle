@@ -83,5 +83,19 @@ def validate_corner(board: list):
 
     return True
 
-import doctest
-doctest.testmod()
+def validate_board (board):
+    '''
+    Gets board configuration and returns True if it is correct.
+    >>> validate_corner(["**** ****",\
+ "***1 ****",\
+ "**  3****",\
+ "* 4 1****",\
+ "     9 5 ",\
+ " 6  83  *",\
+ "3   1  **",\
+ "  8  2***",\
+ "  2  ****"])
+    True
+    '''
+    return validate_columns(board) and validate_corner(board) \
+        and validate_rows(board)
