@@ -86,10 +86,10 @@ def validate_corner(board: list):
 
     return True
 
-def validate_board (board):
+def validate_board (board:list):
     '''
     Gets board configuration and returns True if it is correct.
-    >>> validate_corner(["**** ****",\
+    >>> validate_board(["**** ****",\
  "***1 ****",\
  "**  3****",\
  "* 4 1****",\
@@ -98,7 +98,7 @@ def validate_board (board):
  "3   1  **",\
  "  8  2***",\
  "  2  ****"])
-    True
+    False
     '''
     return validate_columns(board) and validate_corner(board) \
         and validate_rows(board)
