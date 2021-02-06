@@ -77,7 +77,7 @@ def validate_corner(board: list):
                     return False
                 numbers.add(element)
 
-        for j in range(i, i + 5):
+        for j in range(i + 1, i + 5):
             element = board[8-i][j]
             if element not in('*', ' '):
                 if element in numbers:
